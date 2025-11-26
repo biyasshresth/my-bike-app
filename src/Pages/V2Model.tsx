@@ -18,9 +18,9 @@ const V2Model = () => {
   }, [images.length]);
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center px-4 py-10 font-sans">
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center px-4 py-10 font-sans">
       {/* Image Carousel */}
-      <div className="relative w-full flex justify-center max-w-4xl h-80 sm:h-96 bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
+      <div className="relative w-full flex justify-center max-w-4xl h-80 sm:h-96 bg-black rounded-2xl overflow-hidden shadow-lg">
         <img
           src={images[current]}
           alt="Yamaha Mt 15"
@@ -106,6 +106,27 @@ const V2Model = () => {
               </p>
             </div>
           </div>
+        </section>
+         {/* NOTE SECTION */}
+        <section className="max-w-screen  border-gray-200 mx-auto lg:py-10 px-4 sm:px-16 lg:px-12 text-center text-sm bg-gray-900 text-white/70 space-y-6 leading-relaxed mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold">Note</h2>
+          <p>
+            The stated discount is exclusively available at participating,
+            authorized Mt-15 dealers. All information is non-binding. Printing,
+            layout, and typographical errors as well as other mistakes are
+            reserved. Information may be changed at any time without prior
+            notice.
+          </p>
+          <p>
+            The illustrated vehicles may vary in selected details from the
+            production models and some illustrations feature optional equipment
+            available at additional cost. All information concerning the scope
+            of supply, appearance, services, dimensions and weights is
+            non-binding and specified with the proviso that errors may occur;
+            such information is subject to change without notice. Model
+            specifications may vary by country. Consumption values refer to the
+            roadworthy series condition at factory delivery.
+          </p>
         </section>
       </div>
     </div>
