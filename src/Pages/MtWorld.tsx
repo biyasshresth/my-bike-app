@@ -57,14 +57,14 @@ const MtWorld: React.FC = () => {
           </Link>
 
           {/* Card 2 */}
-          <Link to="/new-models" className="relative group block">
+          <Link to="/upcom-model" className="relative group block">
             <img
               src={NewModel}
               alt="NEW MODELS"
               className="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg transition-transform group-hover:scale-105">
-              <button className="bg-blue-600 text-white font-semibold px-6 py-3 rounded">
+              <button type="button" className="bg-blue-600 text-white font-semibold px-6 py-3 rounded">
                 NEW MODELS
               </button>
             </div>
