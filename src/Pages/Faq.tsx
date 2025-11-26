@@ -147,7 +147,7 @@ const Faq = forwardRef<HTMLDivElement>((props, ref) => {
                         {item.tags.map((t) => (
                           <span
                             key={t}
-                            className="inline-flex items-center rounded-full border border-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-700"
+                            className="inline-flex items-center rounded-full border border-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-700"  
                           >
                             {t}
                           </span>

@@ -22,6 +22,7 @@ import YamahaRace from "./Pages/YamahaRace";
 import YamahaRiders from "./Pages/YamahaRiders";
 import YamahaAdvanture from "./Pages/YamahaAdvanture";
 import SpareParts from "./Pages/SpareParts";
+import PageNotFound from "./Pages/PageNotFound";
 const Dashboard = () => {
   return (
     <>
@@ -31,6 +32,7 @@ const Dashboard = () => {
             <Route path="/" element={<Home />} />
             {/* <Route path="Header" element={<Header />} /> */}
             <Route path="models" element={<Models />} />
+             <Route path="*" element={<PageNotFound />} />
             <Route path="bs4-model" element={<Bs4Model />} />
             <Route path="v2-model" element={<V2Model />} />
             <Route path="upcom-model" element={<UpcomModel />} />
