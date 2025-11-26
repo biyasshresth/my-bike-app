@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Img1 from "../assets/Mtv2model.png";
-import Img2 from "../assets/Mtv2model1.png";
-import Img3 from "../assets/Mtv2model2.png";
-
+import Img1 from "../assets/MtvtwoModel.png";
+import Img2 from "../assets/MtvtwoModel1.png";
+import Img3 from "../assets/MtvtwoModel2.png";
+import Img4 from "../assets/MtvtwoModel4.png";
 const V2Model = () => {
-  const images = [Img1, Img2, Img3];
+  const images = [Img1, Img2, Img3, Img4];
   const [current, setCurrent] = useState(0);
 
   const nextImage = () => setCurrent((prev) => (prev + 1) % images.length);
