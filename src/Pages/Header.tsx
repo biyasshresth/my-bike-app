@@ -3,11 +3,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 import { Link, useNavigate } from "react-router-dom";
 
-interface HeaderProps {
-  transparent?: boolean;
-}
-
-const Header: React.FC<HeaderProps> = ({ transparent }) => {
+const Header: React.FC = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false);
@@ -130,7 +126,7 @@ const Header: React.FC<HeaderProps> = ({ transparent }) => {
 
           <li>
             <a
-              href="power-wear"
+              href="/power-wear"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition-colors"
             >
