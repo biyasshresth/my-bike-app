@@ -32,7 +32,7 @@ const Dashboard = () => {
             <Route path="/" element={<Home />} />
             {/* <Route path="Header" element={<Header />} /> */}
             <Route path="models" element={<Models />} />
-             <Route path="*" element={<PageNotFound />} />
+            <Route path="*" element={<PageNotFound />} />
             <Route path="bs4-model" element={<Bs4Model />} />
             <Route path="v2-model" element={<V2Model />} />
             <Route path="upcom-model" element={<UpcomModel />} />
@@ -42,7 +42,7 @@ const Dashboard = () => {
             <Route path="faq" element={<Faq />} />
             <Route path="mt-world" element={<MtWorld />} />
             <Route path="maintainance" element={<Maintainance />} />
-            <Route path="power-wear" element={<PowerWear />} />
+            <Route path="powerwear" element={<PowerWear />} />
             <Route path="yamaha-news-page" element={<YamahaNewsPage />} />
             <Route path="terms-policy" element={<TermsPolicy />} />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
