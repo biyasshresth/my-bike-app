@@ -1,6 +1,3 @@
-import React from "react";
-
-// Importing all images from assets folder
 import SpareParts1 from "../assets/SpareParts1.png";
 import SpareParts2 from "../assets/SpareParts2.png";
 import SpareParts3 from "../assets/Spareparts3.png";
