@@ -1,7 +1,4 @@
-import React from "react";
 import YamahaStyle from "../assets/YamahaStyle.png";
-import Footer from "./Footer";
-import Header from "./Header";
 
 export default function PowerWear() {
   return (
