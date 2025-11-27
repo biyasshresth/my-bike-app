@@ -81,7 +81,7 @@ const spareParts = [
   },
 ];
 
-export default function SpareParts() {
+const SpareParts = () => {
   return (
     <div className="w-full bg-gray-900 py-10 px-4">
       {/* Page Title */}
@@ -124,4 +124,5 @@ export default function SpareParts() {
       </div>
     </div>
   );
-}
+};
+export default SpareParts;

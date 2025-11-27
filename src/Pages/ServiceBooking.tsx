@@ -21,7 +21,7 @@ const ServiceBooking = () => {
         </div>
 
         {/* Description */}
-        <div className="min-w-4xl sm:max-w-xl px-56 sm:px-2 text-center text-gray-200 mb-10 sm:mb-2">
+        <div className="min-w-4xl sm:max-w-xl md:px-56 sm:px-2 text-center text-gray-200 mb-10 sm:mb-2">
           <p>
             <strong>Yamaha Express Service (YES)</strong> is a program offered
             by Yamaha Nepal that provides convenient maintenance and repair
