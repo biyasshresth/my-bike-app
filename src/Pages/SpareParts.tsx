@@ -3,7 +3,7 @@ import React from "react";
 // Importing all images from assets folder
 import SpareParts1 from "../assets/SpareParts1.png";
 import SpareParts2 from "../assets/SpareParts2.png";
-import SpareParts3 from "../assets/SpareParts3.png";
+import SpareParts3 from "../assets/Spareparts3.png";
 import SpareParts4 from "../assets/SpareParts4.png";
 import SpareParts5 from "../assets/SpareParts5.png";
 import SpareParts6 from "../assets/SpareParts6.png";
@@ -115,7 +115,9 @@ export default function SpareParts() {
 
       {/* Daraz Section */}
       <div className="max-w-6xl mx-auto text-center mt-16">
-        <h2 className="text-xl text-gray-200 font-semibold mb-4">We are now available in:</h2>
+        <h2 className="text-xl text-gray-200 font-semibold mb-4">
+          We are now available in:
+        </h2>
         <div className="flex justify-center">
           <img src={DarazLogo} alt="Daraz Logo" className="w-40" />
         </div>
