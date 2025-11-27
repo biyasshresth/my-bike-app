@@ -126,7 +126,7 @@ const Header: React.FC = () => {
 
           <li>
             <a
-              href="/power-wear"
+              href="/powerwear"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition-colors"
             >
