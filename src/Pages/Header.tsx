@@ -152,7 +152,13 @@ const Header: React.FC = () => {
           <FaMapMarkerAlt />
         </button>
 
-        <button type="button" className="text-blue-400">
+        <button
+          type="button"
+          onClick={() => {
+            navigate("/map");
+          }}
+          className="text-blue-400"
+        >
           🌐
         </button>
 
