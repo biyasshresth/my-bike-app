@@ -1,7 +1,5 @@
 import React from "react";
 import ExpServiceLogo from "../assets/ExpService.png";
-import Footer from "./Footer";
-import Header from "./Header";
 
 const ServiceBooking = () => {
   return (
