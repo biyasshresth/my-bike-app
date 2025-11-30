@@ -93,6 +93,10 @@ const Home: React.FC = () => {
   const [query, setQuery] = useState("");
   const [openId, setOpenId] = useState<number | null>(null);
 
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+    
   // Banner rotation
   useEffect(() => {
     const interval = setInterval(

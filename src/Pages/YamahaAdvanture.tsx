@@ -1,4 +1,4 @@
-import { useState } from "react";
+ import React, { useEffect, useState } from "react";
 import YamahaRally1 from "../assets/YamahaRally1.png";
 import YamahaRally2 from "../assets/YamahaRally2.png";
 import YamahaRally3 from "../assets/YamahaRally3.png";
@@ -8,7 +8,9 @@ import RallyVedio from "../assets/RallyVedio.mp4";
 
 export default function ArticlePage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
+useEffect(() => {
+              window.scrollTo(0, 0);
+            }, []);
   return (
     <div className="w-full min-h-screen bg-gray-900 text-gray-200">
       {/* HERO IMAGE */}

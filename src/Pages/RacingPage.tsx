@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+ import React, { useEffect, useState } from "react";
 import Racing1 from "../assets/Racing1.png";
 import Racing2 from "../assets/Racing2.png";
 import Racing3 from "../assets/Racing3.png";
@@ -19,6 +19,9 @@ const RacingPage = () => {
     setIsOpen(false);
     setCurrentImage(null);
   };
+   useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <div className="w-full max-w-screen-xl mx-auto px-4 bg-gray-900">
       <h1 className="text-2xl md:text-5xl flex justify-center font-extrabold text-blue-200 uppercase drop-shadow-lg underline">

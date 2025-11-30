@@ -20,6 +20,10 @@ const YamahaRace: React.FC = () => {
   const [showAllMobile, setShowAllMobile] = useState(false);
   const [showMobileRS, setShowMobileRS] = useState(false);
   const [mobileIndex, setMobileIndex] = useState(0);
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     if (showAllMobile) return;
@@ -214,12 +218,6 @@ const YamahaRace: React.FC = () => {
                   />
                   <div className="p-4">
                     <h3 className="font-bold text-lg">{card.title}</h3>
-                    <button
-                      type="button"
-                      className="mt-3 px-4 py-2 bg-black text-white text-sm"
-                    >
-                      VIEW DETAILS
-                    </button>
                   </div>
                 </div>
               );
@@ -243,9 +241,6 @@ const YamahaRace: React.FC = () => {
                 <h3 className="font-bold text-lg">
                   {cardsData[mobileIndex].title}
                 </h3>
-                <button className="mt-3 px-4 py-2 bg-black text-white text-sm">
-                  VIEW DETAILS
-                </button>
               </div>
             </div>
           )}

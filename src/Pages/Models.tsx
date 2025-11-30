@@ -2,9 +2,7 @@ import Mtbs4Model2 from "../assets/Mtbs4Model2.png";
 import V2model from "../assets/V2model.png";
 import UCmodel from "../assets/UCmodel.png";
 import { Link } from "react-router-dom";
-import Header from "./Header";
-import Footer from "./Footer";
-
+import React, { useEffect, useState } from "react";
 const models = [
   {
     title: "2020 Mt-15 Bs4 Model",
@@ -27,6 +25,9 @@ const models = [
 ];
 
 const Models = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
       <div className="bg-gradient-to-b from-gray-900 via-black to-gray-800 text-white min-h-screen ">

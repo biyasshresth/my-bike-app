@@ -4,6 +4,9 @@ import Img2 from "../assets/MtucModel1.png";
 import Img3 from "../assets/MtucModel2.png";
 
 const UpcomModel = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const images = [Img1, Img2, Img3];
   const [current, setCurrent] = useState(0);
 
