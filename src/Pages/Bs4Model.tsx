@@ -126,7 +126,7 @@ const Bs4Model = () => {
         {/* VIDEO SECTION */}
         <div className="w-full max-w-5xl  mt-16 mb-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center ml-10">
           {/* Video */}
-          <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-700">
+          <div className="rounded-2xl md:ml-10 overflow-hidden shadow-lg border border-gray-700">
             <video
               src={MTModified}
               autoPlay
@@ -137,9 +137,9 @@ const Bs4Model = () => {
           </div>
 
           {/* Description */}
-          <div className="space-y-4">
+          <div className="space-y-4 md:px-2">
             <h2 className="text-4xl font-extrabold text-orange-500">
-              MT-15 Modified Highlights
+              MT-15 BS4 Highlights
             </h2>
             <p className="text-gray-300 leading-relaxed">
               This modified MT-15 BS4 offers enhanced visuals and performance,
