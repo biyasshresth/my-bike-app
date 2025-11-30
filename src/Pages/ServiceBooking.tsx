@@ -32,9 +32,9 @@ const ServiceBooking = () => {
       </div>
 
       {/* Description */}
-      <div className="max-w-3xl mx-auto text-gray-200 text-center mb-10 px-2 py-7">
-        <p>
-          Yamaha Express Service (YES) is a program offered by Yamaha Nepal that
+     <div className="max-w-3xl sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto text-gray-200 text-center mb-10 px-4 py-7">
+  <p className="text-base sm:text-lg lg:text-lg leading-relaxed">
+          <strong>Yamaha Express Service (YES)</strong> is a program offered by Yamaha Nepal that
           provides convenient maintenance and repair services for Yamaha
           motorcycles and scooters. The program is designed to help Yamaha
           owners book service online as per their convenient time slot. It will
@@ -42,7 +42,7 @@ const ServiceBooking = () => {
           customers to attend their motorcycle and scooter during booked time
           slot.
         </p>
-        <p className="mt-4">
+         <p className="text-base sm:text-lg lg:text-lg leading-relaxed">
           Customers can visit the Yamaha Nepal website to book their service at
           the nearest authorized service center. The Yamaha Express Service
           program is available at selected Yamaha dealerships across Nepal, and
