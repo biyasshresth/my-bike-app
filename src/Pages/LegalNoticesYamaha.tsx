@@ -1,6 +1,9 @@
-import React from "react";
+ import React, { useEffect, useState } from "react";
 
 export default function LegalNoticesYamaha() {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <div className="min-h-screen bg-gray-950 py-10">
       <div className="max-w-5xl mx-auto p-10 bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl shadow-lg">

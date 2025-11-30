@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import YamahaDirt2 from "../assets/YamahaDirt2.png";
 import YamahaRace from "../assets/YamahaRace.png";
 import YamahaCruiser from "../assets/YamahaCruiser.png";
 
 export default function YamahaNewsPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const cards = [
     {
       date: "Oct 14, 2025",

@@ -16,7 +16,9 @@ const V2Model = () => {
     }, 3000);
     return () => clearInterval(timer);
   }, [images.length]);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center px-4 py-10 font-sans">
       {/* Image Carousel */}
@@ -107,7 +109,7 @@ const V2Model = () => {
             </div>
           </div>
         </section>
-         {/* NOTE SECTION */}
+        {/* NOTE SECTION */}
         <section className="max-w-screen  border-gray-200 mx-auto lg:py-10 px-4 sm:px-16 lg:px-12 text-center text-sm bg-gray-900 text-white/70 space-y-6 leading-relaxed mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold">Note</h2>
           <p>

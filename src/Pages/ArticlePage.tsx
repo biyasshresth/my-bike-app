@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import YamahaRace5 from "../assets/YamahaRace5.png";
 import YamahaRace from "../assets/YamahaRace.png";
 import YamahaRace6 from "../assets/YamahaRace6.png";
 import YamahaRace7 from "../assets/YamahaRace7.png";
 
 export default function ArticlePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <div className="w-full min-h-screen bg-gray-900 text-gray-200">
       {/* HERO IMAGE */}
@@ -43,11 +49,6 @@ export default function ArticlePage() {
           />
           <img
             src={YamahaRace6}
-            alt="Yamaha Side"
-            className="w-full h-auto rounded-lg object-cover"
-          />
-          <img
-            src={YamahaRace7}
             alt="Yamaha Side"
             className="w-full h-auto rounded-lg object-cover"
           />
@@ -105,8 +106,10 @@ export default function ArticlePage() {
           <p>
             With renewed determination, Guevara now looks toward the next season
             with the momentum of a champion and the support of a team that
-            believes strongly in his potential. Fans eagerly await what comes
-            next for one of the sport’s brightest rising stars.
+            believes strongly in his potential. On the straight, I truly
+            realised just how much power it has and what it must be like to
+            manage that for a full race. Fans eagerly await what comes next for
+            one of the sport’s brightest rising stars.
           </p>
         </div>
       </div>
@@ -115,28 +118,36 @@ export default function ArticlePage() {
       <div className="max-w-6xl mx-auto px-4 mt-16">
         <h2 className="text-2xl md:text-3xl font-bold mb-6">Photo Gallery</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          <img
-            src={YamahaRace5}
-            alt="Gallery Image 1"
-            className="w-full h-48 sm:h-56 md:h-48 object-cover rounded-lg"
-          />
-          <img
-            src={YamahaRace}
-            alt="Gallery Image 2"
-            className="w-full h-48 sm:h-56 md:h-48 object-cover rounded-lg"
-          />
-          <img
-            src={YamahaRace6}
-            alt="Gallery Image 3"
-            className="w-full h-48 sm:h-56 md:h-48 object-cover rounded-lg"
-          />
-          <img
-            src={YamahaRace7}
-            alt="Gallery Image 4"
-            className="w-full h-48 sm:h-56 md:h-48 object-cover rounded-lg"
-          />
+          {[YamahaRace5, YamahaRace, YamahaRace6, YamahaRace7].map(
+            (img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Gallery Image ${index + 1}`}
+                className="w-full h-48 sm:h-56 md:h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition"
+                onClick={() => setSelectedImage(img)}
+              />
+            )
+          )}
         </div>
       </div>
+      {/* FULLSCREEN MODAL WITH CLOSE BUTTON */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center shadow-2xl z-50">
+          <button
+            type="button"
+            className="absolute top-4 right-4 text-red-600 text-3xl sm:text-4xl font-bold focus:outline-none shadow-2xl"
+            onClick={() => setSelectedImage(null)}
+          >
+            &times;
+          </button>
+          <img
+            src={selectedImage}
+            alt="Full Screen"
+            className="max-w-full sm:max-w-3xl max-h-[90vh] rounded-lg shadow-lg"
+          />
+        </div>
+      )}
 
       {/* FOOTER SPACING */}
       <div className="h-20" />

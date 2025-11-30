@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import YamahaDirt5 from "../assets/YamahaDirt5.png";
 import YamahaDirt1 from "../assets/YamahaDirt1.png";
 import YamahaDirt2 from "../assets/YamahaDirt2.png";
@@ -8,7 +8,9 @@ import DirtVedio from "../assets/DirtVedio.mp4";
 
 export default function ArticlePage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="w-full min-h-screen bg-gray-900 text-gray-200">
       {/* HERO IMAGE */}
@@ -117,13 +119,12 @@ export default function ArticlePage() {
               experience is truly a dream come true. In the morning, I had a
               briefing with Jack Miller's technical team, who explained how the
               bike works and how to manage the braking and acceleration. The
-              power of this bike is incredible. <br />
-              I was really surprised by the acceleration. Even before changing
-              gears, I could feel there was still more power to come, which is
-              impressive. The feeling in the corners was fantastic; the bike is
-              smooth and easy to handle. On the straight, I truly realised just
-              how much power it has and what it must be like to manage that for
-              a full race."
+              power of this bike is incredible. <br />I was really surprised by
+              the acceleration. Even before changing gears, I could feel there
+              was still more power to come, which is impressive. The feeling in
+              the corners was fantastic; the bike is smooth and easy to handle.
+              On the straight, I truly realised just how much power it has and
+              what it must be like to manage that for a full race."
             </p>
             <p className="font-semibold mt-2 sm:mt-3">
               — IZAN GUEVARA, BLU CRU Pramac Yamaha Moto2 Rider
@@ -161,7 +162,7 @@ export default function ArticlePage() {
       {selectedImage && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center shadow-2xl z-50">
           <button
-          type="button"
+            type="button"
             className="absolute top-4 right-4 text-red-600 text-3xl sm:text-4xl font-bold focus:outline-none shadow-2xl"
             onClick={() => setSelectedImage(null)}
           >

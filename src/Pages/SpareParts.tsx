@@ -15,7 +15,7 @@ import SpareParts14 from "../assets/SpareParts14.png";
 import SpareParts15 from "../assets/SpareParts15.png";
 import SpareParts16 from "../assets/SpareParts16.png";
 import DarazLogo from "../assets/DarazLogo.png";
-
+ import React, { useEffect, useState } from "react";
 const spareParts = [
   {
     id: 1,
@@ -79,6 +79,9 @@ const spareParts = [
 ];
 
 const SpareParts = () => {
+  useEffect(() => {
+            window.scrollTo(0, 0);
+          }, []);
   return (
     <div className="w-full bg-gray-900 py-10 px-4">
       {/* Page Title */}

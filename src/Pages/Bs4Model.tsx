@@ -5,6 +5,9 @@ import Img3 from "../assets/Mtbs4Model2.png";
 import MTModified from "../assets/MTModified.mp4"; // Video import
 
 const Bs4Model = () => {
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const images = [Img1, Img2, Img3];
   const [current, setCurrent] = useState(0);
 

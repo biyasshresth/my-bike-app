@@ -89,15 +89,13 @@ const Faq = forwardRef<HTMLDivElement>((props, ref) => {
         {/* Content wrapper */}
         <div className="relative z-10 mx-auto max-w-4xl px-4 pb-24 pt-16 sm:px-6 md:pt-20">
           {/* Title + Logo */}
-          <div className="mb-2 flex items-center justify-center gap-3">
-            <div>
-              {/* Yamaha Logo  */}
-              <img
-                src="YamahaLogo.svg"
-                alt="Yamaha Logo"
-                className="w-10 md:w-16 h-10 md:h-16 object-contain"
-              />
-            </div>
+          <div className="mb-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <img
+              src="YamahaLogo.svg"
+              alt="Yamaha Logo"
+              className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+            />
+
             <h1 className="text-center text-3xl font-semibold text-gray-200 sm:text-4xl">
               Frequently Asked Questions
             </h1>
@@ -147,7 +145,7 @@ const Faq = forwardRef<HTMLDivElement>((props, ref) => {
                         {item.tags.map((t) => (
                           <span
                             key={t}
-                            className="inline-flex items-center rounded-full border border-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-700"  
+                            className="inline-flex items-center rounded-full border border-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-700"
                           >
                             {t}
                           </span>

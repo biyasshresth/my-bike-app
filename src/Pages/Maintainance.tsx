@@ -1,6 +1,5 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
 const Maintainance: React.FC = () => {
   const navigate = useNavigate();
 
@@ -8,6 +7,9 @@ const Maintainance: React.FC = () => {
     navigate("/service-booking");
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="w-full bg-gray-900 flex justify-center py-6 px-4">
       <div className="mx-auto max-w-4xl w-full bg-gray-900 p-4 shadow-md">

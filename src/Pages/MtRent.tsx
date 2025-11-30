@@ -1,8 +1,10 @@
-import React from "react";
-import RentalMt1 from "../assets/RentalMt1.png";
+ import RentalMt1 from "../assets/RentalMt1.png";
 import LogoYamaha from "../assets/LogoYamaha.png";
-
+import React, { useEffect, useState } from "react";
 export default function YamahaMT15Rental() {
+   useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <div className="w-full min-h-screen bg-gray-900 flex justify-center py-10 px-4">
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10">
