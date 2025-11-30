@@ -63,14 +63,7 @@ export default function ArticlePage() {
             defining moment for the rider and highlighted his commitment, speed,
             and racing intelligence.
           </p>
-          <p>
-            As Guevara crossed the finish line in Valencia, the paddock
-            witnessed a celebration filled with emotion and anticipation for
-            what's next. Yamaha rewarded his efforts with an exclusive test
-            opportunity, allowing him to experience the performance and
-            refinement of the latest Yamaha prototype, marking a significant
-            milestone in his professional journey.
-          </p>
+
           <p>
             The test provided valuable feedback to Yamaha engineers while
             offering Guevara a taste of what awaits should he continue his rise
@@ -84,14 +77,9 @@ export default function ArticlePage() {
               "Izan is the first BLU CRU rider to try a MotoGP bike, and once
               again he showed his talent. He completed two runs of five laps
               each, demonstrating how quickly he can adapt to the bike and
-              manage the braking points. This opportunity came from a bet I made
-              with him in Malaysia, after seeing how much he improved during the
-              second part of the season, to give him some extra motivation. I
-              promised that if he won a race before the end of the season, he
-              would get the chance to test the MotoGP bike in a private session.
-              After winning the Valencian GP, today he received his reward. I
-              hope this experience gives him even more motivation as we look
-              ahead to the 2026 season."
+              manage the braking points. After winning the Valencian GP, today
+              he received his reward. I hope this experience gives him even more
+              motivation as we look ahead to the 2026 season."
             </p>
             <p className="font-semibold mt-2 sm:mt-3">
               — GINO BORSOI, Team Director, BLU CRU Pramac Yamaha Moto2
@@ -104,16 +92,10 @@ export default function ArticlePage() {
               "I am so thankful to Yamaha for giving me the opportunity to try
               the M1. Jumping on a MotoGP bike is a goal for anyone who wants to
               become a professional rider, and being able to live this
-              experience is truly a dream come true. In the morning, I had a
-              briefing with Jack Miller's technical team, who explained how the
-              bike works and how to manage the braking and acceleration. The
-              power of this bike is incredible. <br />
-              I was really surprised by the acceleration. Even before changing
-              gears, I could feel there was still more power to come, which is
-              impressive. The feeling in the corners was fantastic; the bike is
-              smooth and easy to handle. On the straight, I truly realised just
-              how much power it has and what it must be like to manage that for
-              a full race."
+              experience is truly a dream come true. <br />I was really
+              surprised by the acceleration. On the straight, I truly realised
+              just how much power it has and what it must be like to manage that
+              for a full race."
             </p>
             <p className="font-semibold mt-2 sm:mt-3">
               — IZAN GUEVARA, BLU CRU Pramac Yamaha Moto2 Rider
