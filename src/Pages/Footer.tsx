@@ -36,7 +36,7 @@ const Footer: React.FC<FooterProps> = ({ transparent }) => {
             <li>
               <a
                 href="/yamaha-news-page"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-purple-700 transition-colors"
               >
                 News & Blogs
               </a>
@@ -44,7 +44,7 @@ const Footer: React.FC<FooterProps> = ({ transparent }) => {
             <li>
               <a
                 href="/racing-page"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-purple-700 transition-colors"
               >
                 Racing Page
               </a>
@@ -52,7 +52,7 @@ const Footer: React.FC<FooterProps> = ({ transparent }) => {
             <li>
               <a
                 href="https://www.instagram.com/mt15ridersnepal_official/?hl=en"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-purple-700 transition-colors"
               >
                 Ride MT-15
               </a>
@@ -65,19 +65,19 @@ const Footer: React.FC<FooterProps> = ({ transparent }) => {
           <h3 className="font-bold uppercase mb-4 text-lg">Service</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <a href="/faq" className="hover:text-blue-400">
+              <a href="/faq" className="hover:text-purple-700">
                 FAQ
               </a>
             </li>
             <li>
-              <a href="/maintainance" className="hover:text-blue-400">
+              <a href="/maintainance" className="hover:text-purple-700">
                 Maintenance
               </a>
             </li>
             <li>
               <a
                 href="/spare-parts"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-purple-700 transition-colors"
               >
                 Spare Parts
               </a>
@@ -90,17 +90,17 @@ const Footer: React.FC<FooterProps> = ({ transparent }) => {
           <h3 className="font-bold uppercase mb-4 text-lg">Legal</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <a href="/legal-notices-yamaha" className="hover:text-blue-400">
+              <a href="/legal-notices-yamaha" className="hover:text-purple-700">
                 Legal Notices
               </a>
             </li>
             <li>
-              <a href="/terms-policy" className="hover:text-blue-400">
+              <a href="/terms-policy" className="hover:text-purple-700">
                 Terms of Use
               </a>
             </li>
             <li>
-              <a href="/privacy-policy" className="hover:text-blue-400">
+              <a href="/privacy-policy" className="hover:text-purple-700">
                 Privacy Policy
               </a>
             </li>
@@ -116,7 +116,7 @@ const Footer: React.FC<FooterProps> = ({ transparent }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
-              className="hover:text-blue-400"
+              className="hover:text-red-500"
             >
               <FaYoutube size={24} />
             </a>
@@ -125,7 +125,7 @@ const Footer: React.FC<FooterProps> = ({ transparent }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="hover:text-blue-400"
+              className="hover:text-blue-700"
             >
               <FaFacebook size={22} />
             </a>
@@ -134,7 +134,7 @@ const Footer: React.FC<FooterProps> = ({ transparent }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="hover:text-blue-400"
+              className="hover:text-purple-700"
             >
               <FaInstagram size={22} />
             </a>

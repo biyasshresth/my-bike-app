@@ -23,13 +23,30 @@ import YamahaRiders from "./Pages/YamahaRiders";
 import YamahaAdvanture from "./Pages/YamahaAdvanture";
 import SpareParts from "./Pages/SpareParts";
 import PageNotFound from "./Pages/PageNotFound";
+import Login from "./Pages/LogIn";
+import { useState } from "react";
 const Dashboard = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <>
       <Router>
         <Routes>
-          <Route element={<MainLayout />}>
+          <Route
+            path="/login"
+            element={<Login setIsLoggedIn={setIsLoggedIn} />}
+          />
+
+          <Route
+            element={
+              <MainLayout
+                isLoggedIn={isLoggedIn}
+                setIsLoggedIn={setIsLoggedIn}
+              />
+            }
+          >
             <Route path="/" element={<Home />} />
+            {/* <Route path="login" element={<LogIn />} /> */}
             {/* <Route path="Header" element={<Header />} /> */}
             <Route path="models" element={<Models />} />
             <Route path="*" element={<PageNotFound />} />

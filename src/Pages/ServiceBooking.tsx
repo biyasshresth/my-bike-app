@@ -1,10 +1,10 @@
 import ExpServiceLogo from "../assets/ExpService.png";
 import YamahaBg from "../assets/YamahaBg.png";
- import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 const ServiceBooking = () => {
   useEffect(() => {
-          window.scrollTo(0, 0);
-        }, []);
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="bg-gray-900 min-h-screen px-4 py-2">
       {/* Header with background image */}
@@ -16,13 +16,13 @@ const ServiceBooking = () => {
         />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        <div className="relative z-10 flex flex-col items-center">
+        <div className="relative z-10 flex flex-col items-center mb-16">
           <img
             src={ExpServiceLogo}
             alt="Yamaha Express Service"
             className="h-24 sm:h-32 md:h-40 w-auto mb-4"
           />
-          <h1 className="text-xl sm:text-2xl md:text-3xl text-black font-bold">
+          <h1 className="text-xl sm:text-2xl md:text-3xl text-gray-200 font-bold">
             BOOK YOUR SERVICE ONLINE
           </h1>
           <p className="text-sm sm:text-base italic text-gray-200 mt-2">
@@ -32,17 +32,17 @@ const ServiceBooking = () => {
       </div>
 
       {/* Description */}
-      <div className="max-w-3xl mx-auto text-gray-200 text-center mb-10 px-2 py-7">
-        <p>
-          Yamaha Express Service (YES) is a program offered by Yamaha Nepal that
-          provides convenient maintenance and repair services for Yamaha
-          motorcycles and scooters. The program is designed to help Yamaha
-          owners book service online as per their convenient time slot. It will
-          reduce the waiting period at service center and will save the time of
-          customers to attend their motorcycle and scooter during booked time
-          slot.
+      <div className="max-w-3xl sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto text-gray-200 text-center mb-10 px-4 py-7">
+        <p className="text-base sm:text-lg lg:text-lg leading-relaxed">
+          <strong>Yamaha Express Service (YES)</strong> is a program offered by
+          Yamaha Nepal that provides convenient maintenance and repair services
+          for Yamaha motorcycles and scooters. The program is designed to help
+          Yamaha owners book service online as per their convenient time slot.
+          It will reduce the waiting period at service center and will save the
+          time of customers to attend their motorcycle and scooter during booked
+          time slot.
         </p>
-        <p className="mt-4">
+        <p className="text-base sm:text-lg lg:text-lg leading-relaxed">
           Customers can visit the Yamaha Nepal website to book their service at
           the nearest authorized service center. The Yamaha Express Service
           program is available at selected Yamaha dealerships across Nepal, and
@@ -67,7 +67,6 @@ const ServiceBooking = () => {
               Full Name *
               <input
                 type="text"
-                placeholder="Full Name text-white"
                 className="border rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 mt-1 text-black"
               />
             </label>

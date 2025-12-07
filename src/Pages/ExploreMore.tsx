@@ -12,7 +12,7 @@ export default function ExploreMore() {
       <div className="max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Card 1 */}
-          <a href="/article-page" className="group block">
+          <a href="/racing-page" className="group block">
             <article className="relative overflow-hidden rounded-md">
               <img
                 src={MtRace}
@@ -20,7 +20,7 @@ export default function ExploreMore() {
                 className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute left-4 top-4 bg-black text-white px-3 py-1 text-sm font-semibold rounded">
-                Yamaha_Dirt
+                Naked_Model
               </div>
               <div className="mt-4">
                 <p className="text-xs text-gray-200">Nov 9, 2025</p>
@@ -49,7 +49,7 @@ export default function ExploreMore() {
                 className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute left-4 top-4 bg-black text-white px-3 py-1 text-sm font-semibold rounded">
-                Naked_Model
+                Yamaha_Dirt
               </div>
               <div className="mt-4">
                 <p className="text-xs text-gray-200">Nov 6, 2025</p>

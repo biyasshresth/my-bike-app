@@ -76,10 +76,9 @@ const Faq = forwardRef<HTMLDivElement>((props, ref) => {
         ref={ref}
         className="relative min-h-screen overflow-hidden bg-gray-900"
       >
-        {/* Blue background layers */}
         <div
           aria-hidden="true"
-          className="pointer-events-none  absolute inset-x-4 top-4 mx-auto h-[1280px] max-w-6xl rounded-3xl border border-gray-900 bg-gradient-to-b from-gray-700 to-gray-800"
+          className="pointer-events-none  absolute inset-x-4 top-4 mx-auto h-[1280px] max-w-6xl rounded-3xl border border-gray-500 bg-gradient-to-b from-gray-700 to-gray-800"
         />
         <div
           aria-hidden="false"
@@ -107,7 +106,7 @@ const Faq = forwardRef<HTMLDivElement>((props, ref) => {
           </p>
 
           {/* Search bar */}
-          <div className="mx-auto mb-8 flex max-w-xl items-center rounded-full border border-blue-200 bg-white px-4 py-2 shadow-lg">
+          <div className="w-full mx-auto mb-8 max-w-xl flex items-center rounded-full border border-blue-200 bg-gray-800 px-2 sm:px-3  py-2 shadow-lg">
             <input
               type="text"
               placeholder="Enter keyword"
@@ -118,7 +117,10 @@ const Faq = forwardRef<HTMLDivElement>((props, ref) => {
               className="w-full bg-transparent px-1 text-sm text-gray-700 placeholder-gray-400 outline-none"
               aria-label="Search FAQs"
             />
-            <FiSearch className="h-5 w-5 text-gray-400" aria-hidden="true" />
+            <FiSearch
+              className="h-5 w-5 text-gray-400 shrink-0"
+              aria-hidden="true"
+            />
           </div>
 
           {/* FAQ List */}
@@ -129,23 +131,43 @@ const Faq = forwardRef<HTMLDivElement>((props, ref) => {
               return (
                 <div
                   key={item.id}
-                  className="overflow-hidden rounded-xl border border-blue-100 bg-gray-300 shadow-sm"
+                  className={`group overflow-hidden rounded-xl border border-blue-100 shadow-sm transition-all duration-300
+    ${
+      isOpen
+        ? "bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white"
+        : "bg-gray-300 text-gray-800"
+    }
+    hover:bg-gradient-to-r hover:from-gray-700 hover:via-gray-700 hover:to-gray-500 hover:text-white
+  `}
                 >
                   <button
                     type="button"
-                    aria-controls={contentId}
+                    aria-controls={`faq-content-${item.id}`}
                     onClick={() => setOpenId(isOpen ? null : item.id)}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition"
                   >
                     <div className="min-w-0">
-                      <p className="truncate text-[15px] font-medium text-gray-800">
+                      <p
+                        className={`truncate text-[15px] font-medium transition-colors duration-300
+          ${isOpen ? "text-white" : "text-gray-800"}
+          group-hover:text-white
+        `}
+                      >
                         {item.q}
                       </p>
+
                       <div className="mt-2 flex flex-wrap gap-2">
                         {item.tags.map((t) => (
                           <span
                             key={t}
-                            className="inline-flex items-center rounded-full border border-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-700"
+                            className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium transition
+              ${
+                isOpen
+                  ? "border-gray-300 text-gray-300"
+                  : "border-gray-700 text-gray-700"
+              }
+              group-hover:text-gray-300 group-hover:border-gray-300
+            `}
                           >
                             {t}
                           </span>
@@ -155,35 +177,36 @@ const Faq = forwardRef<HTMLDivElement>((props, ref) => {
 
                     <IoIosArrowDropdownCircle
                       size={28}
-                      className={`ml-4 flex-none text-blue-600 transform transition-transform duration-300 ${
-                        isOpen ? "rotate-180" : "rotate-0"
-                      }`}
+                      className={`ml-4 flex-none transform transition-transform duration-300
+        ${isOpen ? "rotate-180 text-white" : "rotate-0 text-gray-900"}
+        group-hover:text-white hover:scale-125
+      `}
                       aria-hidden="true"
                     />
                   </button>
 
                   {isOpen && (
                     <div
-                      id={contentId}
-                      className="px-5 pb-5 pt-0 text-sm leading-6 text-gray-600"
+                      id={`faq-content-${item.id}`}
+                      className="px-5 pb-5 pt-0 text-sm leading-6 text-gray-300"
                     >
                       <p>{item.a}</p>
 
-                      <div className="mt-3 grid grid-cols-1 gap-2 text-xs text-gray-500 sm:grid-cols-3">
-                        <div className="rounded-lg bg-blue-50 px-3 py-2 ring-1 ring-inset ring-blue-100">
-                          <span className="font-medium text-blue-700">
+                      <div className="mt-3 grid grid-cols-1 gap-2 text-xs sm:grid-cols-3">
+                        <div className="rounded-lg bg-gray-800 px-3 py-2 ring-1 ring-inset ring-gray-700">
+                          <span className="font-medium text-white">
                             Category:
                           </span>{" "}
                           {item.tags[0] || "General"}
                         </div>
-                        <div className="rounded-lg bg-blue-50 px-3 py-2 ring-1 ring-inset ring-blue-100">
-                          <span className="font-medium text-blue-700">
+                        <div className="rounded-lg bg-gray-800 px-3 py-2 ring-1 ring-inset ring-gray-700">
+                          <span className="font-medium text-white">
                             Updated:
                           </span>{" "}
                           This month
                         </div>
-                        <div className="rounded-lg bg-blue-50 px-3 py-2 ring-1 ring-inset ring-blue-100">
-                          <span className="font-medium text-blue-700">
+                        <div className="rounded-lg bg-gray-800 px-3 py-2 ring-1 ring-inset ring-gray-700">
+                          <span className="font-medium text-white">
                             Contact:
                           </span>{" "}
                           contact@YamahaNepal.com.np
