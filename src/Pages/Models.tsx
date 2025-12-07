@@ -32,7 +32,7 @@ const Models = () => {
     <>
       <div className="bg-gradient-to-b from-gray-900 via-black to-gray-800 text-white min-h-screen ">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-blue-200 tracking-tight mb-4">
+          <h1 className="text-5xl md:text-6xl mt-6 font-extrabold text-blue-200 tracking-tight mb-4">
             MT-15 Models in Nepal
           </h1>
           <p className="text-lg text-gray-300 mb-12">

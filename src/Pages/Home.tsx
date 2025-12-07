@@ -94,9 +94,9 @@ const Home: React.FC = () => {
   const [openId, setOpenId] = useState<number | null>(null);
 
   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
-    
+    window.scrollTo(0, 0);
+  }, []);
+
   // Banner rotation
   useEffect(() => {
     const interval = setInterval(
@@ -107,13 +107,13 @@ const Home: React.FC = () => {
   }, []);
 
   // Cards rotation
- useEffect(() => {
-  const interval = setInterval(() => {
-    setActiveCardIndex((prev) => (prev + 1) % cardsData.length);
-  }, 1500);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveCardIndex((prev) => (prev + 1) % cardsData.length);
+    }, 1500);
 
-  return () => clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
   const visibleCards = [
     cardsData[activeCardIndex],
     cardsData[(activeCardIndex + 1) % cardsData.length],
@@ -157,7 +157,7 @@ const Home: React.FC = () => {
           </h1>
           <Link
             to="/explore-more"
-            className="mt-4 sm:mt-6 bg-blue-800 hover:scale-105 hover:shadow-2xl text-white uppercase font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded shadow-lg"
+            className="mt-4 sm:mt-6 bg-gray-900  hover:bg-[#C4CBCA] hover:text-gray-900 hover:scale-105 hover:shadow-2xl text-white uppercase font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded shadow-lg"
           >
             Explore more
           </Link>
@@ -179,69 +179,69 @@ const Home: React.FC = () => {
         ))}
       </div>
 
-    {/* FEATURED MOTORCYCLES */}
-<section className="mt-6 lg:mt-20 px-2 sm:px-6 lg:px-16">
-  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
-    Featured Motorcycles
-  </h2>
+      {/* FEATURED MOTORCYCLES */}
+      <section className="mt-6 lg:mt-20 px-2 sm:px-6 lg:px-16">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
+          Featured Motorcycles
+        </h2>
 
-  {/* DESKTOP: show 3 rotating cards */}
-  <div className="hidden sm:flex lg:justify-center gap-4 lg:gap-8">
-    {[
-      cardsData[activeCardIndex],
-      cardsData[(activeCardIndex + 1) % cardsData.length],
-      cardsData[(activeCardIndex + 2) % cardsData.length],
-    ].map((card, index) => {
-      const isActive = index === 1; // middle card highlighted
-      return (
-        <div
-          key={card.name}
-          className={`flex flex-col items-center transition-all duration-700 ${
-            isActive ? "scale-105 lg:scale-110 z-10" : "scale-95 opacity-70"
-          } w-[28%]`}
-        >
-          <Link to={card.link}>
-            <div className="bg-white rounded-2xl overflow-hidden w-full h-80 shadow-lg">
-              <img
-                src={card.img}
-                alt={card.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </Link>
-          <p
-            className={`mt-3 text-xl font-semibold transition-all duration-700 ${
-              isActive ? "text-blue-400 drop-shadow-xl" : "text-white/70"
-            }`}
-          >
-            {card.name}
-          </p>
+        {/* DESKTOP: show 3 rotating cards */}
+        <div className="hidden sm:flex lg:justify-center gap-4 lg:gap-8">
+          {[
+            cardsData[activeCardIndex],
+            cardsData[(activeCardIndex + 1) % cardsData.length],
+            cardsData[(activeCardIndex + 2) % cardsData.length],
+          ].map((card, index) => {
+            const isActive = index === 1;  
+            return (
+              <div
+                key={card.name}
+                className={`flex flex-col items-center transition-all duration-700 ${
+                  isActive
+                    ? "scale-105 lg:scale-110 z-10"
+                    : "scale-95 opacity-70"
+                } w-[28%]`}
+              >
+                <Link to={card.link}>
+                  <div className="bg-white rounded-2xl overflow-hidden w-full h-80 shadow-lg">
+                    <img
+                      src={card.img}
+                      alt={card.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </Link>
+                <p
+                  className={`mt-3 text-xl font-semibold transition-all duration-700 ${
+                    isActive ? "text-purple-700 drop-shadow-xl" : "text-white/70"
+                  }`}
+                >
+                  {card.name}
+                </p>
+              </div>
+            );
+          })}
         </div>
-      );
-    })}
-  </div>
 
-  {/* MOBILE: show 1 rotating card */}
-  <div className="flex sm:hidden justify-center">
-    <div className="flex flex-col items-center w-80">
-      <Link to={cardsData[activeCardIndex].link}>
-        <div className="bg-white rounded-2xl overflow-hidden w-full h-64 shadow-lg">
-          <img
-            src={cardsData[activeCardIndex].img}
-            alt={cardsData[activeCardIndex].name}
-            className="w-full h-full object-cover"
-          />
+        {/* MOBILE: show 1 rotating card */}
+        <div className="flex sm:hidden justify-center">
+          <div className="flex flex-col items-center w-80">
+            <Link to={cardsData[activeCardIndex].link}>
+              <div className="bg-gray-300 rounded-2xl overflow-hidden w-full h-64 shadow-lg">
+                <img
+                  src={cardsData[activeCardIndex].img}
+                  alt={cardsData[activeCardIndex].name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </Link>
+            <p className="mt-3 text-lg font-semibold text-white/70">
+              {cardsData[activeCardIndex].name}
+            </p>
+          </div>
         </div>
-      </Link>
-      <p className="mt-3 text-lg font-semibold text-white/70">
-        {cardsData[activeCardIndex].name}
-      </p>
-    </div>
-  </div>
-</section>
+      </section>
 
-
-            
       {/* FAQ SECTION */}
       <section className="relative bg-gray-900 mt-20 lg:mt-28 px-2 sm:px-6 lg:px-16 pb-16">
         <div className="max-w-4xl mx-auto">
@@ -279,58 +279,86 @@ const Home: React.FC = () => {
               return (
                 <div
                   key={item.id}
-                  className="overflow-hidden rounded-xl border border-blue-100 bg-gray-800 shadow-sm"
+                  className={`group overflow-hidden rounded-xl border border-blue-100 shadow-sm transition-all duration-300
+                  ${
+                    isOpen
+                      ? "bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white"
+                      : "bg-gray-300 text-gray-800"
+                  }
+                  hover:bg-gradient-to-r hover:from-gray-700 hover:via-gray-700 hover:to-gray-500 hover:text-white
+                `}
                 >
                   <button
                     type="button"
-                    aria-controls={contentId}
+                    aria-controls={`faq-content-${item.id}`}
                     onClick={() => setOpenId(isOpen ? null : item.id)}
-                    className="flex w-full flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-4 px-4 sm:px-5 py-3 sm:py-4 text-left hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition"
                   >
                     <div className="min-w-0">
-                      <p className="truncate text-[15px] sm:text-sm font-medium text-gray-200">
+                      <p
+                        className={`truncate text-[15px] font-medium transition-colors duration-300
+                        ${isOpen ? "text-white" : "text-gray-800"}
+                        group-hover:text-white
+                      `}
+                      >
                         {item.q}
                       </p>
-                      <div className="mt-2 flex flex-wrap gap-1 sm:gap-2">
+
+                      <div className="mt-2 flex flex-wrap gap-2">
                         {item.tags.map((t) => (
                           <span
                             key={t}
-                            className="inline-flex items-center rounded-full border border-blue-200 px-2 py-0.5 text-xs font-medium text-blue-400"
+                            className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium transition
+                            ${
+                              isOpen
+                                ? "border-gray-300 text-gray-300"
+                                : "border-gray-700 text-gray-700"
+                            }
+                            group-hover:text-gray-300 group-hover:border-gray-300
+                          `}
                           >
                             {t}
                           </span>
                         ))}
                       </div>
                     </div>
+
                     <IoIosArrowDropdownCircle
                       size={28}
-                      className={`ml-0 sm:ml-4 flex-none text-blue-400 transform transition-transform duration-300 ${
-                        isOpen ? "rotate-180" : "rotate-0"
-                      }`}
+                      className={`ml-4 flex-none transform transition-transform duration-300
+                      ${
+                        isOpen
+                          ? "rotate-180 text-white"
+                          : "rotate-0 text-gray-900"
+                      }
+                      group-hover:text-white hover:scale-125
+                    `}
+                      aria-hidden="true"
                     />
                   </button>
 
                   {isOpen && (
                     <div
-                      id={contentId}
-                      className="px-4 sm:px-5 pb-5 pt-2 text-sm leading-6 text-gray-200"
+                      id={`faq-content-${item.id}`}
+                      className="px-5 pb-5 pt-0 text-sm leading-6 text-gray-300"
                     >
                       <p>{item.a}</p>
-                      <div className="mt-3 grid grid-cols-1 gap-2 text-xs sm:grid-cols-3 text-gray-400">
-                        <div className="rounded-lg bg-blue-900/20 px-3 py-2 ring-1 ring-inset ring-blue-800">
-                          <span className="font-medium text-blue-400">
+
+                      <div className="mt-3 grid grid-cols-1 gap-2 text-xs sm:grid-cols-3">
+                        <div className="rounded-lg bg-gray-800 px-3 py-2 ring-1 ring-inset ring-gray-700">
+                          <span className="font-medium text-white">
                             Category:
                           </span>{" "}
                           {item.tags[0] || "General"}
                         </div>
-                        <div className="rounded-lg bg-blue-900/20 px-3 py-2 ring-1 ring-inset ring-blue-800">
-                          <span className="font-medium text-blue-400">
+                        <div className="rounded-lg bg-gray-800 px-3 py-2 ring-1 ring-inset ring-gray-700">
+                          <span className="font-medium text-white">
                             Updated:
                           </span>{" "}
                           This month
                         </div>
-                        <div className="rounded-lg bg-blue-900/20 px-3 py-2 ring-1 ring-inset ring-blue-800">
-                          <span className="font-medium text-blue-400">
+                        <div className="rounded-lg bg-gray-800 px-3 py-2 ring-1 ring-inset ring-gray-700">
+                          <span className="font-medium text-white">
                             Contact:
                           </span>{" "}
                           contact@YamahaNepal.com.np
@@ -341,81 +369,37 @@ const Home: React.FC = () => {
                 </div>
               );
             })}
-            {filteredFaqs.length === 0 && (
-              <div className="rounded-xl border border-blue-100 bg-gray-800 p-6 text-center text-sm text-gray-400">
-                No results for “{query}”.
-              </div>
-            )}
           </div>
         </div>
       </section>
 
       {/* NOTE SECTION */}
-      <section className="max-w-screen border-t border-gray-200 mx-auto lg:py-10 px-4 sm:px-16 lg:px-72 text-center text-sm bg-gray-900 text-white/70 space-y-6 leading-relaxed mb-12">
-        <h2 className="text-2xl sm:text-3xl font-bold">Note</h2>
-        <p>
-          The stated discount is exclusively available at participating,
-          authorized Mt-15 dealers. All information is non-binding. Printing,
-          layout, and typographical errors as well as other mistakes are
-          reserved. Information may be changed at any time without prior notice.
-        </p>
-        <p>
-          The illustrated vehicles may vary in selected details from the
-          production models and some illustrations feature optional equipment
-          available at additional cost. All information concerning the scope of
-          supply, appearance, services, dimensions and weights is non-binding
-          and specified with the proviso that errors may occur; such information
-          is subject to change without notice. Model specifications may vary by
-          country. Consumption values refer to the roadworthy series condition
-          at factory delivery.
-        </p>
-      </section>
+      <section className="mx-auto mb-12 border-t border-gray-200 bg-gray-900 px-4 sm:px-16 lg:px-72 py-10 text-white/80">
+        <div className="mx-auto max-w-3xl space-y-6">
+          <h2 className="text-center text-2xl sm:text-3xl font-bold text-white">
+            Note
+          </h2>
 
-      {/* FOOTER
-      <footer className="w-full bg-gray-900 text-white py-10 border-t border-gray-700">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 px-4 sm:px-6 lg:px-16">
-          <div className="flex flex-col items-start">
-            <img src="YamahaLogo.svg" alt="Yamaha Logo" className="w-24 mb-2" />
-            <h2 className="text-xl sm:text-2xl font-bold uppercase text-blue-400">Yamaha</h2>
-          </div>
+          <p className="text-center leading-relaxed">
+            The stated discount is exclusively available at participating,
+            authorized Mt-15 dealers. All information is non-binding. Printing,
+            layout, and typographical errors as well as other mistakes are
+            reserved. Information may be changed at any time without prior
+            notice.
+          </p>
 
-          <div>
-            <h3 className="font-bold uppercase mb-4">MT-15 World</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/YamahaNewsPage" className="hover:text-blue-400">News & Blogs</Link></li>
-              <li><a href="https://www.instagram.com/mt15ridersnepal_official/?hl=en" className="hover:text-blue-400">Racing Page</a></li>
-              <li><span>Ride Mt-15</span></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-bold uppercase mb-4">Service</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/Faq" className="hover:text-blue-400">FAQ</Link></li>
-              <li><Link to="/Maintainance" className="hover:text-blue-400">Maintainance</Link></li>
-              <li><Link to="/spare-parts" className="hover:text-blue-400">Spare Parts</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-bold uppercase mb-4">Legal</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/LegalNoticesYamaha" className="hover:text-blue-400">Legal Notices</Link></li>
-              <li><Link to="/TermsPolicy" className="hover:text-blue-400">Terms of Use</Link></li>
-              <li><Link to="/PrivacyPolicy" className="hover:text-blue-400">Privacy Policy</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-bold uppercase mb-4">Connect</h3>
-            <div className="flex gap-4">
-              <a href="https://www.youtube.com/c/YamahaNepal" aria-label="YouTube" className="hover:text-blue-400"><FaYoutube size={23} /></a>
-              <a href="https://www.facebook.com/YamahaNepal" aria-label="Facebook" className="hover:text-blue-400"><FaFacebook size={20} /></a>
-              <a href="https://www.instagram.com/yamaha_scooters_nepal" aria-label="Instagram" className="hover:text-blue-400"><FaInstagram size={20} /></a>
-            </div>
-          </div>
+          <p className="text-center leading-relaxed">
+            The illustrated vehicles may vary in selected details from the
+            production models and some illustrations feature optional equipment
+            available at additional cost. All information concerning the scope
+            of supply, appearance, services, dimensions and weights is
+            non-binding and specified with the proviso that errors may occur;
+            such information is subject to change without notice. Model
+            specifications may vary by country. Consumption values refer to the
+            roadworthy series condition at factory delivery.
+          </p>
         </div>
-      </footer> */}
+      </section>
     </div>
   );
 };

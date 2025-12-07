@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Img1 from "../assets/MtucModel.png";
 import Img2 from "../assets/MtucModel1.png";
 import Img3 from "../assets/MtucModel2.png";
-
+import YamahaUpcomming from "../assets/YamahaUpcomming.mp4";
 const UpcomModel = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -110,6 +110,39 @@ const UpcomModel = () => {
             </div>
           </div>
         </section>
+         {/* VIDEO SECTION */}
+        <div className="w-full max-w-5xl mt-16 mb-20 mx-auto flex flex-col md:flex-row gap-8">
+          {/* Video */}
+          <div className="flex-1 rounded-2xl overflow-hidden shadow-lg border border-gray-700 h-10 md:h-96">
+            <video
+              src={YamahaUpcomming}
+              autoPlay
+              loop
+              muted
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Video Description */}
+          <div className="flex-1 flex flex-col justify-start space-y-4 px-2">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-orange-500">
+              MT-15 Upcomming Model
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+              This modified MT-15 BS4 offers enhanced visuals and performance,
+              delivering a bold and aggressive streetfighter stance. Crafted for
+              riders who prefer unique styling and premium road presence.
+            </p>
+            <ul className="text-gray-200 list-disc list-inside space-y-1">
+              <li>Streetfighter Custom Bodywork</li>
+              <li>Upgraded LED Headlight & Indicators</li>
+              <li>Sharper Exhaust Tone</li>
+              <li>Premium Graphics & Detailing</li>
+              <li>Sporty Riding Posture</li>
+              <li>Upgraded Suspension System</li>
+            </ul>
+          </div>
+        </div>
         {/* NOTE SECTION */}
         <section className="max-w-screen  border-gray-200 mx-auto lg:py-10 px-4 sm:px-16 lg:px-12 text-center text-sm bg-gray-900 text-white/70 space-y-6 leading-relaxed mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold">Note</h2>
