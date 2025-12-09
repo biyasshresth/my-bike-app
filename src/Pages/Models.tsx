@@ -32,7 +32,7 @@ const Models = () => {
     <>
       <div className="bg-gradient-to-b from-gray-900 via-black to-gray-800 text-white min-h-screen ">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl mt-6 font-extrabold text-blue-200 tracking-tight mb-4">
+          <h1 className="text-4xl md:text-5xl mt-6 font-extrabold text-gray-200 tracking-tight mb-4">
             MT-15 Models in Nepal
           </h1>
           <p className="text-lg text-gray-300 mb-12">
@@ -64,12 +64,12 @@ const Models = () => {
                   <h2 className="text-xl md:text-2xl font-bold mb-2">
                     {model.title}
                   </h2>
-                  <p className="text-blue-400 uppercase font-semibold tracking-wider mb-4">
+                  <p className="text-gray-600 uppercase font-semibold tracking-wider mb-4">
                     {model.tagline}
                   </p>
                   <Link
                     to={model.link}
-                    className="inline-block bg-blue-600 hover:bg-orange-700 text-white font-bold py-2 px-5 rounded-lg transition"
+                    className="inline-block bg-purple-200 hover:bg-orange-700 text-black font-bold py-2 px-5 rounded-lg transition"
                   >
                     Visit Model Page
                   </Link>

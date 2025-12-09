@@ -25,6 +25,9 @@ import SpareParts from "./Pages/SpareParts";
 import PageNotFound from "./Pages/PageNotFound";
 import Login from "./Pages/LogIn";
 import { useState } from "react";
+import ContactForm from "./Pages/ContactForm";
+import SideBar from "./Pages/SideBar";
+import MtModified from "./Pages/MtModified";
 const Dashboard = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -32,24 +35,10 @@ const Dashboard = () => {
     <>
       <Router>
         <Routes>
-          <Route
-            path="/login"
-            element={<Login setIsLoggedIn={setIsLoggedIn} />}
-          />
-
-          <Route
-            element={
-              <MainLayout
-                isLoggedIn={isLoggedIn}
-                setIsLoggedIn={setIsLoggedIn}
-              />
-            }
-          >
+          <Route path="/login" element={<Login />} />
+          <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
-            {/* <Route path="login" element={<LogIn />} /> */}
-            {/* <Route path="Header" element={<Header />} /> */}
             <Route path="models" element={<Models />} />
-            <Route path="*" element={<PageNotFound />} />
             <Route path="bs4-model" element={<Bs4Model />} />
             <Route path="v2-model" element={<V2Model />} />
             <Route path="upcom-model" element={<UpcomModel />} />
@@ -68,13 +57,17 @@ const Dashboard = () => {
             <Route path="article-page" element={<ArticlePage />} />
             <Route path="yamaha-riders" element={<YamahaRiders />} />
             <Route path="spare-parts" element={<SpareParts />} />
+            <Route path="contact-us" element={<ContactForm />} />
+             <Route path="MtModified" element={<MtModified />} />
             <Route path="yamaha-advanture" element={<YamahaAdvanture />} />
             <Route
               path="legal-notices-yamaha"
               element={<LegalNoticesYamaha />}
             />
-            {/* <Route path="Footer" element={<Footer />} /> */}
+            <Route path="*" element={<PageNotFound />} />
           </Route>
+
+          {/* <Route path="Footer" element={<Footer />} /> */}
         </Routes>
       </Router>
     </>

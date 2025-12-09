@@ -71,10 +71,10 @@ const faqs: FAQ[] = [
 ];
 
 const cardsData = [
-  { name: "MtRacing", img: MtRacing, link: "/mt-racing" },
+  { name: "MtRacing", img: MtRacing, link: "/racing-page" },
   { name: "MtEnduro", img: MtEnduro, link: "/mt-enduro" },
-  { name: "MtModified", img: MtModified, link: "/mt-modified" },
-  { name: "MtAdventure", img: MtAdventure, link: "/mt-adventure" },
+  { name: "MtModified", img: MtModified, link: "/MtModified" },
+  { name: "MtAdventure", img: MtAdventure, link: "/yamaha-advanture" },
   { name: "MtCafeRacer", img: MtCafeRacer, link: "/mt-cafe-racer" },
 ];
 
@@ -152,8 +152,8 @@ const Home: React.FC = () => {
           <p className="text-xs sm:text-sm text-white/80 uppercase mb-2">
             Built to beat the best
           </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold uppercase drop-shadow-lg text-white">
-            2026 MT-15 300 XC-W HARDENDURO
+          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold uppercase drop-shadow-lg text-white">
+            2026 MT-15 300 XC-W  <br />HARDENDURO
           </h1>
           <Link
             to="/explore-more"
@@ -173,7 +173,7 @@ const Home: React.FC = () => {
             aria-label={`Show banner ${i + 1}`}
             onClick={() => setBannerIndex(i)}
             className={`h-1 sm:w-6 sm:h-2 rounded-full transition-all duration-300 ${
-              i === bannerIndex ? "bg-blue-300 w-6 sm:w-6" : "bg-white/60"
+              i === bannerIndex ? "bg-[#F2EFEA] w-6 sm:w-6" : "bg-white/40"
             }`}
           />
         ))}
@@ -181,7 +181,7 @@ const Home: React.FC = () => {
 
       {/* FEATURED MOTORCYCLES */}
       <section className="mt-6 lg:mt-20 px-2 sm:px-6 lg:px-16">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
+        <h2 className="text-2xl sm:text-3xl py-5 font-bold text-center mb-6">
           Featured Motorcycles
         </h2>
 
@@ -192,7 +192,7 @@ const Home: React.FC = () => {
             cardsData[(activeCardIndex + 1) % cardsData.length],
             cardsData[(activeCardIndex + 2) % cardsData.length],
           ].map((card, index) => {
-            const isActive = index === 1;  
+            const isActive = index === 1;
             return (
               <div
                 key={card.name}
@@ -213,7 +213,9 @@ const Home: React.FC = () => {
                 </Link>
                 <p
                   className={`mt-3 text-xl font-semibold transition-all duration-700 ${
-                    isActive ? "text-purple-700 drop-shadow-xl" : "text-white/70"
+                    isActive
+                      ? "text-gray-200 drop-shadow-xl"
+                      : "text-white/70"
                   }`}
                 >
                   {card.name}
@@ -247,7 +249,7 @@ const Home: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-6">
             <img
-              src="YamahaLogo.svg"
+              src="YamahaLogo1.png"
               alt="Yamaha Logo"
               className="w-12 sm:w-16 mx-auto mb-2"
             />
