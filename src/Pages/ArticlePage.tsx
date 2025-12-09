@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import YamahaRace5 from "../assets/YamahaRace5.png";
+import YamahaRace5 from "../assets/YamahaRace5.mp4";
 import YamahaRace from "../assets/YamahaRace.png";
 import YamahaRace6 from "../assets/YamahaRace6.png";
 import YamahaRace7 from "../assets/YamahaRace7.png";
-
+import YamahaRace8 from "../assets/YamahaRace8.png";
 export default function ArticlePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -15,17 +15,21 @@ export default function ArticlePage() {
     <div className="w-full min-h-screen bg-gray-900 text-gray-200">
       {/* HERO IMAGE */}
       <div className="relative w-full h-[300px] sm:h-[380px] md:h-[480px] overflow-hidden rounded-lg">
-        <img
+        <video
           src={YamahaRace5}
-          alt="Yamaha Racing"
-          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full  h-96 sm:h-96 md:h-96 rounded-lg object-cover"
         />
+
         {/* Overlay Text */}
         <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 text-gray-200">
           <p className="text-xs sm:text-sm tracking-wide opacity-80">
             MOTO GP &nbsp;|&nbsp; 10 NOVEMBER 2025
           </p>
-          <h1 className="text-lg sm:text-2xl md:text-4xl font-bold leading-tight mt-1 drop-shadow-lg">
+          <h1 className="text-xl sm:text-xl md:text-3xl font-bold leading-tight mt-1 drop-shadow-lg">
             IZAN GUEVARA ENJOYS YAMAHA REWARD AFTER VALENCIAN GP TRIUMPH
           </h1>
         </div>
@@ -33,7 +37,7 @@ export default function ArticlePage() {
 
       {/* TITLE SECTION */}
       <div className="max-w-6xl mx-auto px-4 mt-8">
-        <h2 className="text-xl sm:text-2xl md:text-4xl font-bold leading-tight drop-shadow-lg">
+        <h2 className="text-xl sm:text-xl md:text-3xl font-bold leading-tight drop-shadow-lg">
           Description:
         </h2>
       </div>
@@ -118,7 +122,7 @@ export default function ArticlePage() {
       <div className="max-w-6xl mx-auto px-4 mt-16">
         <h2 className="text-2xl md:text-3xl font-bold mb-6">Photo Gallery</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          {[YamahaRace5, YamahaRace, YamahaRace6, YamahaRace7].map(
+          {[YamahaRace8, YamahaRace, YamahaRace6, YamahaRace7].map(
             (img, index) => (
               <img
                 key={index}

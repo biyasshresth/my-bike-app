@@ -90,7 +90,7 @@ const Faq = forwardRef<HTMLDivElement>((props, ref) => {
           {/* Title + Logo */}
           <div className="mb-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <img
-              src="YamahaLogo.svg"
+              src="YamahaLogo1.png"
               alt="Yamaha Logo"
               className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
             />
