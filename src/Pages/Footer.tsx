@@ -153,6 +153,15 @@ const Footer: React.FC<FooterProps> = ({ transparent }) => {
               <FaInstagram size={22} />
             </a>
           </div>
+          <div>
+            <h3 className="font-bold uppercasetext-sm gap-2 mt-5 mb-2">CONTACT US</h3>
+            <p className="text-xs gap-1  mb-3 mt-2">
+              ✓ Toll Free (NTC): 1660011044
+            </p>
+            <p className="text-xs gap-1  mb-3 mt-1">
+              ✓ Toll Free (NCELL): 9801570044
+            </p>
+          </div>
         </div>
       </div>
 

@@ -73,7 +73,7 @@ const faqs: FAQ[] = [
 const cardsData = [
   { name: "MtRacing", img: MtRacing, link: "/racing-page" },
   { name: "MtEnduro", img: MtEnduro, link: "/mt-enduro" },
-  { name: "MtModified", img: MtModified, link: "/MtModified" },
+  { name: "MtModified", img: MtModified, link: "/mt-modified" },
   { name: "MtAdventure", img: MtAdventure, link: "/yamaha-advanture" },
   { name: "MtCafeRacer", img: MtCafeRacer, link: "/mt-cafe-racer" },
 ];

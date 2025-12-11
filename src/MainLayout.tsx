@@ -1,9 +1,14 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Pages/Header";
 import Footer from "./Pages/Footer";
 import { useState, useEffect } from "react";
 
 const MainLayout: React.FC = () => {
+  const location = useLocation();
+
+  
+  const hideLayout = ["/dash-board"].includes(location.pathname);
+
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(() => {
     return localStorage.getItem("isLoggedIn") === "true";
   });
@@ -15,9 +20,11 @@ const MainLayout: React.FC = () => {
 
   return (
     <div className="flex flex-col bg-gray-900 min-h-screen">
-      <Header />
+      {!hideLayout && <Header />}
+      
       <Outlet />
-      <Footer />
+      
+      {!hideLayout && <Footer />}
     </div>
   );
 };
