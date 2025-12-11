@@ -40,12 +40,13 @@ const Login = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center">
-
       {/* 🔥 Animated Success Popup */}
       {showSuccess && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50">
-          <div className="bg-white text-green-700 px-10 py-6 rounded-xl shadow-xl text-center 
-                          animate-[fadeIn_0.5s_ease-out]">
+          <div
+            className="bg-white text-green-700 px-10 py-6 rounded-xl shadow-xl text-center 
+                          animate-[fadeIn_0.5s_ease-out]"
+          >
             <h2 className="text-2xl font-bold">LOGIN SUCCESSFUL</h2>
             <p className="text-gray-600 mt-1">Redirecting...</p>
           </div>
@@ -54,34 +55,47 @@ const Login = () => {
 
       {/* Background Image */}
       <div className="absolute inset-0 bg-[url('/LoginBg.png')] bg-cover bg-center bg-no-repeat filter blur-sm"></div>
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Login Card */}
-      <div className="relative z-10 border-white shadow-lg rounded-lg p-8 w-full max-w-md text-center bg-gray-300 bg-opacity-90 backdrop-blur-sm">
+      <div className="relative z-10 border-white shadow-lg rounded-lg p-8 w-full max-w-md text-center bg-gray-700 bg-opacity-90 backdrop-blur-sm">
         <div className="flex items-center justify-center gap-3 mb-4">
-          <img src="YamahaLogo.svg" alt="Logo" className="w-12 h-12" />
-          <h1 className="text-3xl font-bold text-gray-900 font-mono">Login</h1>
+          <img
+            src="YamahaLogo1.png"
+            alt="Logo"
+            className="w-12 h-12 text-black"
+          />
+          <h1 className="text-3xl font-bold text-gray-200 font-mono">Login</h1>
         </div>
 
-        <h2 className="text-xl font-bold mb-6 mt-2 text-gray-900">
-          Welcome To Our Royal Palm <br /> Real Estate
+        <h2 className="text-xl font-bold mb-6 mt-2 text-gray-200">
+          Welcome To Our MT-15 Page <br /> MT NEPAL{" "}
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg"
+            alt="Nepal Flag"
+            className="inline-block w-6 h-6 "
+          />
         </h2>
 
         <form onSubmit={handleLogin} className="space-y-5 text-left">
           <div>
-            <label className="block text-gray-900 font-medium mb-1">Email :</label>
+            <label className="block text-gray-200 font-medium mb-1">
+              Email :
+            </label>
             <input
               type="email"
               value={identifier}
               onChange={(e) => setEmail(e.target.value)}
               required
-              placeholder="Enter your email"
+              placeholder="you@example.com"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
             />
           </div>
 
           <div className="relative">
-            <label className="block text-gray-900 font-medium mb-1">Password :</label>
+            <label className="block text-gray-200 font-medium mb-1">
+              Password :
+            </label>
             <input
               type={showPassword ? "text" : "password"}
               value={password}
@@ -109,11 +123,11 @@ const Login = () => {
           </button>
         </form>
 
-        <p className="text-sm text-gray-600 mt-4">
+        <p className="text-sm text-gray-400 mt-4">
           Don’t have an account?{" "}
           <span
-            className="text-[#6652b6] font-bold hover:underline cursor-pointer"
-            onClick={() => navigate("/registration")}
+            className="text-[#fad9a1]  font-bold hover:underline cursor-pointer"
+            onClick={() => navigate("/sign-up")}
           >
             Sign Up
           </span>

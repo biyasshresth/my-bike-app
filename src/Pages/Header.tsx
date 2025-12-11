@@ -14,11 +14,7 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false);
   const [mtSidebarOpen, setMtSidebarOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState<boolean>(
-    () =>
-      typeof window !== "undefined" &&
-      document.documentElement.classList.contains("dark")
-  );
+  const [darkMode, setDarkMode] = useState(true);
 
   // Close service dropdown when route changes
   useEffect(() => setServiceDropdownOpen(false), [location.pathname]);
@@ -78,22 +74,34 @@ const Header: React.FC = () => {
             }`}
           >
             <li>
-              <a href="/models" className="inline-block hover:scale-110 hover:text-[#fad9a1] transition duration-300 ease-in-out">
+              <a
+                href="/models"
+                className="inline-block hover:scale-110 hover:text-[#fad9a1] transition duration-300 ease-in-out"
+              >
                 Models
               </a>
             </li>
             <li>
-              <a href="/spare-parts" className="inline-block hover:scale-110 hover:text-[#fad9a1] transition duration-300 ease-in-out">
+              <a
+                href="/spare-parts"
+                className="inline-block hover:scale-110 hover:text-[#fad9a1] transition duration-300 ease-in-out"
+              >
                 Powerparts
               </a>
             </li>
             <li>
-              <a href="/racing-page" className="inline-block hover:scale-110 hover:text-[#fad9a1] transition duration-300 ease-in-out">
+              <a
+                href="/racing-page"
+                className="inline-block hover:scale-110 hover:text-[#fad9a1] transition duration-300 ease-in-out"
+              >
                 Racing
               </a>
             </li>
             <li>
-              <a href="/mt-world" className="inline-block hover:scale-110 hover:text-[#fad9a1] transition duration-300 ease-in-out">
+              <a
+                href="/mt-world"
+                className="inline-block hover:scale-110 hover:text-[#fad9a1] transition duration-300 ease-in-out"
+              >
                 Mt-15 World
               </a>
             </li>
@@ -127,7 +135,10 @@ const Header: React.FC = () => {
             </li>
 
             <li>
-              <a href="/powerwear" className="inline-block hover:scale-110 hover:text-[#fad9a1] transition duration-300 ease-in-out">
+              <a
+                href="/powerwear"
+                className="inline-block hover:scale-110 hover:text-[#fad9a1] transition duration-300 ease-in-out"
+              >
                 Powerwears
               </a>
             </li>
@@ -197,6 +208,7 @@ const Header: React.FC = () => {
           darkMode={darkMode}
           setDarkMode={setDarkMode}
           logout={logout}
+          mode="overlay"
         />
       )}
     </>

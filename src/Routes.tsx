@@ -26,16 +26,20 @@ import PageNotFound from "./Pages/PageNotFound";
 import Login from "./Pages/LogIn";
 import { useState } from "react";
 import ContactForm from "./Pages/ContactForm";
-import SideBar from "./Pages/SideBar";
 import MtModified from "./Pages/MtModified";
+import SignUp from "./Pages/SignUp";
+import DashboardLayout from "./SidebarLayout/DashboardLayout";
+import DashLayout from "./DashLayout";
 const Dashboard = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
   return (
     <>
       <Router>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route element={<DashLayout />}>
+            <Route path="dash-board" element={<DashboardLayout />} />
+            <Route path="contact-us" element={<ContactForm />} />
+          </Route>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="models" element={<Models />} />
@@ -57,8 +61,9 @@ const Dashboard = () => {
             <Route path="article-page" element={<ArticlePage />} />
             <Route path="yamaha-riders" element={<YamahaRiders />} />
             <Route path="spare-parts" element={<SpareParts />} />
-            <Route path="contact-us" element={<ContactForm />} />
-             <Route path="MtModified" element={<MtModified />} />
+            <Route path="mt-modified" element={<MtModified />} />
+            <Route path="sign-up" element={<SignUp />} />
+
             <Route path="yamaha-advanture" element={<YamahaAdvanture />} />
             <Route
               path="legal-notices-yamaha"
