@@ -90,7 +90,7 @@ const ContactForm: React.FC = () => {
         title="Map"
       ></iframe>
 
-      <div className="w-full max-w-5xl bg-gray-300 p-8 mt-6 rounded shadow">
+      <div className="w-full max-w-5xl bg-gray-700 p-8 mt-6 rounded shadow">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Left Column - Contact Info */}
           <div className="px-4 py-4 gap-5">
