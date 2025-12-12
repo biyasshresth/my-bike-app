@@ -3,7 +3,7 @@ import Img1 from "../assets/MtvtwoModel.png";
 import Img2 from "../assets/MtvtwoModel1.png";
 import Img3 from "../assets/MtvtwoModel2.png";
 import Img4 from "../assets/MtvtwoModel4.png";
-import Yamahav2 from "../assets/YamahaV2.mp4";
+import Yamahav2 from "../assets/Yamahav2.mp4";
 const V2Model = () => {
   const images = [Img1, Img2, Img3, Img4];
   const [current, setCurrent] = useState(0);
