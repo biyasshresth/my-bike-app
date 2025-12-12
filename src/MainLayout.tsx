@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const MainLayout: React.FC = () => {
   const location = useLocation();
 
-  
+  // Hide header/footer on certain routes (you previously had "/dash-board")
   const hideLayout = ["/dash-board"].includes(location.pathname);
 
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(() => {
@@ -19,11 +19,9 @@ const MainLayout: React.FC = () => {
   }, [isLoggedIn]);
 
   return (
-    <div className="flex flex-col bg-gray-900 min-h-screen">
+    <div className="flex flex-col bg-gray-900 min-h-screen text-white">
       {!hideLayout && <Header />}
-      
       <Outlet />
-      
       {!hideLayout && <Footer />}
     </div>
   );
